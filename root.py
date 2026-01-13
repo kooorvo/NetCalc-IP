@@ -1,9 +1,3 @@
-"""
-nom des variables = nomDeVariable
-nom des fonctions = nom_de_fontions
-nom des fichiers = nomDeFichier.py
-"""
-
 
 
 from tkinter import *
@@ -23,8 +17,14 @@ def dec_to_bits(dec):
     Représentation binaire de l'entier sous forme de liste de 8 bits
 
     """
+    assert 0 <= dec <= 255
     bits = [0 for i in range(8)]
-    # à compléter
+    i  = 7
+    while dec > 0 : 
+        bits[i] = dec % 2
+        dec = dec // 2
+        i = i -1
+         
     return bits
 
 
@@ -46,7 +46,13 @@ def bits_to_dec(bits):
     entier entre 0 et 255
 
     """
-    # à compléter
+    dec = 0
+    puissance = 0
+    for i in range (len(bits)-1,-1,-1) :
+        dec = dec + bits[i] * 2**puissance
+        puissance = puissance + 1
+    return dec
+    
 
 
 def test_bits_to_dec():
@@ -179,7 +185,7 @@ def verifier_ip(ip):
     booléen
     """
     # à compléter
-
+compléter
 
 def test_verifier_ip():
     assert verifier_ip("172.17.232.6") == True
@@ -205,7 +211,7 @@ def prefixe_reseau(ip_bits, mask):
     """
     prefixe = [0 for i in range(32)]
     ip_masque = [1 for i in range(mask)] + [0 for j in range(32 - mask)]
-    # à compléter
+    # à complétercompléter
 
 
 def test_prefixe_reseau():
