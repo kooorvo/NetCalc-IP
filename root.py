@@ -182,8 +182,28 @@ def verifier_ip(ip):
     -------
     booléen
     """
-    # à compléter
-compléter
+    if not isinstance(ip, str):
+        return False
+    parties2 = ip.split(".")
+    # on vérifie qu'il y a bien 4 parties (pas plus, pas moins)
+    if len(ip) != 4:
+        # si jamais on return False
+        return False
+    #on boucle pour vérifier que les parties en elles-même soient correctes
+    for i in parties2:
+        #on vérifie si chque partie est un nombre
+        if not parties2.isdigit():
+            # si jamais on return False 
+            return False
+        
+        valeur = int(parties2)
+    
+        # on vérifie que les chiffre soient entre 0 et 255 (IPv4)
+        if valeur < 0 or valeur > 255:
+            return False
+    
+    #on return True si tout est check
+    return True
 
 def test_verifier_ip():
     assert verifier_ip("172.17.232.6") == True
