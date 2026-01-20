@@ -1,6 +1,9 @@
 ## ProjetNSI
 Calculateur d'adresses IP pour la NSI
 
+## Voir le site web
+Notre site est désormais rendu public à l'adresse suivante : https://netcalc-ip.netlify.app/
+
 ## Téléchargement
 Rendez-vous dans l'onglet release et téléchargez l'exécutable [NetCalc.exe] (https://github.com/kooorvo/projetNSI/releases)
 
