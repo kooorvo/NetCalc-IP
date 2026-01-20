@@ -11,7 +11,7 @@ Rendez-vous dans l'onglet release et téléchargez l'exécutable [NetCalc.exe] (
 
 
 ---
-patch note : https://github.com/kooorvo/NetCalc-IP/blob/main/patch-note.md
+patch note : https://github.com/kooorvo/NetCalc-IP/blob/main/docs/patch_note.md
 <br>
 <br>
 <br>
